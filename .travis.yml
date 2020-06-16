@@ -47,7 +47,13 @@ script:
     if [[ "$TRAVIS_OS_NAME" == "freebsd" ]]; then gmake ci ; else make ci ; fi ;
     zip geneweb-$TRAVIS_OS_NAME.zip distribution
 
-  addons:
-    artifacts: true
-    paths:
-      - geneweb-$TRAVIS_OS_NAME.zip
+deploy:
+  provider: releases
+  api_key:
+    secure: WzikH/dQYwS9TogYWIZwaORKY4XYjgtqzNM3+fzlfZa8Hnl7GDcOdk7IdBYFY9Qz548PTvMLQzSCUzgVEX2yaL6a4lS29zsvZluKoDAPWd77641/iKqBmxuwctuKaHTrJmbRfML9zG230Z7OEG1ibYpaskin27oity4e8xCLeAe27cv41BbQ8+P+cD1iYYnEUwrLDeWMh3FtCb2bKWDuRp4pN2b6XrUYFG4Kvo1+cnz2onL7ktnZ6JuhkB+ixUEHL0zUONTP29hh/89XqvLX2fF/31FXc8Nu6sH4PYCuHA8NZ/9iRjB9kLuBlt78XRh1yuv3gKnS0yzgkpz6v/8MEOwDB2NhaRpnQu0yfwEvGaz9Y91JB7JsSQX4rgn8rqFJ16sgY3zl5laa+tha5qhXSsurY2RKf5/WGQsnXgACyMxnksEADLi025d28HqIt3kveVI37ExVDpWa1KHQFKPB+saeHaez/Q4XGNns+VUFldnmDCkW3yB5gIPCPEnXGvq6TgXjO6WqyuM+C6kjx/IMGY/u79w+YnEovHUGl26Pl3mhY0/62JUjmRZ/MLFOa3opMZ2CUC5quWOttyjyUxf5UpR0VldE0uvv4AYqe6zW0rCU8vnrSFM+HHS2ZHHjeBsqpSyYn6GPD78gQ+7yif1MpiGFXaT9l9Jkzu6271bYREE=
+  file: "./geneweb-$TRAVIS_OS_NAME.zip"
+  on:
+    repo: geneweb/geneweb
+    branch: binaries-distrib
+  skip_cleanup: 'true'
+  draft: 'true'
