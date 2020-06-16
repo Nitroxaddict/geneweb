@@ -91,5 +91,5 @@
     - '%CYG_BASH% "cd ${APPVEYOR_BUILD_FOLDER} && ocaml ./configure.ml --sosa-zarith && make clean distrib"'
 
   artifacts:
-    - path: 'geneweb-windows.zip'
+    - path: 'geneweb.zip'
       name: 'Geneweb Windows Build'
