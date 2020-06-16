@@ -1,7 +1,7 @@
 -
   branches:
     only:
-      - master
+      - binaries-distrib
 
   skip_commits:
     files:
@@ -19,6 +19,10 @@
 
   platform:
     - x64
+
+  image:
+    - Ubuntu
+    - macOS
 
   environment:
     CYG_ROOT: C:/cygwin64
@@ -91,5 +95,5 @@
     - '%CYG_BASH% "cd ${APPVEYOR_BUILD_FOLDER} && ocaml ./configure.ml --sosa-zarith && make clean distrib"'
 
   artifacts:
-    - path: 'geneweb.zip'
+    - path: 'geneweb-windows.zip'
       name: 'Geneweb Windows Build'
