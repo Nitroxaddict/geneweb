@@ -34,9 +34,9 @@ The documentation is available online: http://geneweb.tuxfamily.org/
 
 The last builds on the master branch can be downloaded here :
 
-* Windows (64bits) : https://ci.appveyor.com/api/projects/geneweb/geneweb/artifacts/geneweb.zip?branch=master
-* Linux : @TODO
-* MacOS : @TODO
+* Windows (64bits): https://ci.appveyor.com/api/projects/geneweb/geneweb/artifacts/geneweb.zip?branch=binaries-distrib
+* Linux: https://ci.appveyor.com/api/projects/geneweb/geneweb/artifacts/geneweb.zip?branch=binaries-distrib
+* MacOS: https://ci.appveyor.com/api/projects/geneweb/geneweb/artifacts/geneweb.zip?branch=binaries-distrib
 
 ## Installation
 
