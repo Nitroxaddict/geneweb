@@ -46,3 +46,8 @@ script:
     opam install $DEPS ;
     if [[ "$TRAVIS_OS_NAME" == "freebsd" ]]; then gmake ci ; else make ci ; fi ;
     zip geneweb-$TRAVIS_OS_NAME.zip distribution
+
+  addons:
+    artifacts: true
+    paths:
+      - geneweb-$TRAVIS_OS_NAME.zip
