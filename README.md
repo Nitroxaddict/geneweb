@@ -30,6 +30,14 @@ with a Web interface and can be used off-line or as a Web service.
 
 The documentation is available online: http://geneweb.tuxfamily.org/
 
+## Nightly Build
+
+The last builds on the master branch can be downloaded here :
+
+* Windows (64bits) : https://ci.appveyor.com/api/projects/geneweb/geneweb/artifacts/geneweb.zip?branch=master
+* Linux : @TODO
+* MacOS : @TODO
+
 ## Installation
 
 Using [opam](https://opam.ocaml.org/):
